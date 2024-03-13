@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    <style>
+
+.accordion-item {
+    margin-bottom: 20px;
+    
+}
+
+.accordion-button {
+    background-color :yellowgreen;
+    color: white; 
+}
+
+
+
+#accordionExample {
+    margin-top: 200px;
+    
+}
+
+@media (min-width: 420px) and (max-width: 430px) {
+    .card-pic-info {
+        text-align: center;
+    }
+
+    .card-pro-pic {
+        margin-top: 35px;
+    }
+
+    .card-pic {
+        margin-left: 50px;
+    }
+
+    .navbar-brand {
+        margin-left: 120px;
+        margin-bottom: 20px;
+    }
+
+    .sort-btn {
+        margin: 0 auto;
+    }
+
+    .blog-btn {
+        margin: 0 auto;
+    }
+}
+
+
+    </style>
+</head>
+<body class="bg-dark">
+
+
+    <div class="container">
+        <div class="accordion justify-content-center" id="accordionExample">
+            
+            
+            <div class="accordion-item">
+                
+                
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                        Discuss the scope of VAR , LET and CONST
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>
+                            <span style="color:red"><b>VAR :</b></span> <br>
+                            * Variables declared with var have function scope or global scope, but not block scope. <br>
+                            * If a var variable is declared inside a function, it is accessible only within that function. <br>
+                            * If a var variable is declared outside any function, it becomes a global variable and is accessible throughout the entire script. <br>
+                            * var variables are subject to hoisting, meaning their declarations are moved to the top of their scope during the compilation phase, but not their assignments.
+                            <br>
+                            <br>
+
+                            <span style="color: red;"> <b>LET :</b> </span> <br>
+                            * Variables declared with let have block scope, meaning they are accessible only within the block (enclosed by curly braces) in which they are declared. <br>
+                            * Unlike var, let variables are not hoisted to the top of their scope. This means you cannot access them before the line where they are declared. <br>
+                            * let allows you to create variables that are limited to the scope of a block statement, expression, or on a global level.
+                            <br>
+                            <br>
+
+                            <span style="color: red;"> <b>CONST :</b></span> <br> 
+                            
+
+                            * Variables declared with const also have block scope like let. <br>
+                            * The value of a const variable cannot be changed once it's assigned. It is a constant. <br>
+                            * Similar to let, const variables are not hoisted to the top of their scope. <br>
+                            * However, it's important to note that while the variable itself cannot be reassigned, if the value is an object or array, its properties or elements can be mutated.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Tell us the use cases of NULL and UNDEFINED
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>
+                            
+                           <span style="color: red;"><b>NULL:</b></span><br>
+                            API Responses:
+                            In APIs, NULL may be used to represent the absence of a value in a response. For example, a JSON field might be explicitly set to null to indicate that there is no value for that field. <br>
+                            Database Integration: 
+                            APIs often interact with databases, where NULL values are commonly used to represent missing or unknown data. API responses may mirror this behavior by returning NULL for fields that have no value. <br>
+                            <br>
+
+
+
+                            <span style="color: red;"><b>UNDEFINED:</b></span> <br>
+
+                            JavaScript Variables and Properties: 
+                            In JavaScript, UNDEFINED is a special value that indicates a variable has been declared but not assigned a value, or that a property does not exist in an object. <br>
+                            Function Returns: 
+                            In JavaScript, functions that do not explicitly return a value return UNDEFINED. This is often seen when a function terminates without encountering a return statement. <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        What do you mean by REST API?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>
+                            <span style="color: red ;"><b>RESET API :</b></span> <br>
+                            REST APIs communicate through HTTP requests to perform standard database functions like creating, reading, updating and deleting records (also known as CRUD) within a resource.
+                            <br> For example, a REST API would use a GET request to retrieve a record. A POST request creates a new record.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+</body>
+</html>
